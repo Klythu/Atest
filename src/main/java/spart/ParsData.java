@@ -34,9 +34,9 @@ public class ParsData {
                         Integer.parseInt(arrayDate[1]) > 12 || Integer.parseInt(arrayDate[2]) < 0 ||
                         Integer.parseInt(arrayDate[2]) > Integer.parseInt(formatForDateNowYear.format(DateNow))) {
                     try {
-                        throw new FutureException();
-                    } catch (FutureException e) {
-                        e.futureException(i);
+                        throw new DateException();
+                    } catch (DateException e) {
+                        e.dataException(i);
                         System.out.println(formatForDateNowYear.format(DateNow));
                     }
                 } else if (Integer.parseInt(arrayDate[2]) == Integer.parseInt(formatForDateNowYear.format(DateNow))
